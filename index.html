@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lea Herrera | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-<div class="animated-bg"></div>
-
-<header>
-  <h1>Lea Herrera</h1>
-  <nav>
-    <button data-target="about">About</button>
-    <button data-target="skills">Skills</button>
-    <button data-target="projects">Projects</button>
-    <button data-target="contact">Contact</button>
-  </nav>
-</header>
-
-<main>
-  <section id="about" class="section-light">
     <div class="container">
-      <h2>About Me</h2>
-      <p>I am passionate about cybersecurity and programming. I participated in Girls Who Code and enjoy building projects that solve real problems. I love learning, experimenting, and creating solutions that make an impact.</p>
+        <header>
+            <h1>Lea Herrera</h1>
+            <p>Aspiring SOC Analyst</p>
+            <nav>
+                <button onclick="showSection('about')">About Me</button>
+                <button onclick="showSection('skills')">Skills</button>
+                <button onclick="showSection('projects')">Projects</button>
+                <button onclick="showSection('contact')">Contact</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about" class="active">
+                <h2>About Me</h2>
+                <p>I've been part of Girls Who Code, learning coding and cybersecurity basics. I enjoy problem-solving, coding, and exploring cybersecurity topics.</p>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python (basic)</li>
+                    <li>Intro to Cybersecurity</li>
+                    <li>Cryptography</li>
+                    <li>Problem Solving & Critical Thinking</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">Breach Bot</a></li>
+                    <li><a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">Programming Caesar's Cipher</a></li>
+                    <li><a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">Cracking Caesar's Cipher</a></li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            </section>
+        </main>
     </div>
-  </section>
-
-  <section id="skills" class="section-dark">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">Python Programming</div>
-        <div class="skill-card">Intro to Cybersecurity</div>
-        <div class="skill-card">Cryptography Basics</div>
-        <div class="skill-card">Networking Fundamentals</div>
-        <div class="skill-card">Problem Solving & Troubleshooting</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section-light">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Breach Bot</h3>
-          <a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Programming Caesar's Cipher</h3>
-          <a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3>Cracking Caesar's Cipher</h3>
-          <a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section-dark">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></p>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Lea Herrera</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
