@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lea Herrera | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -69,8 +69,13 @@
 
     <script>
         function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
         }
+
+        // Initially show only about section
+        document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('about').style.display = 'block';
     </script>
 </body>
 </html>
