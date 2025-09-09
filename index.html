@@ -5,51 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lea's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="header-content">
             <h1>Lea Herrera</h1>
             <p>Aspiring SOC Analyst</p>
             <nav>
-                <button onclick="showSection('about')">About Me</button>
-                <button onclick="showSection('skills')">Skills</button>
-                <button onclick="showSection('projects')">Projects</button>
-                <button onclick="showSection('contact')">Contact</button>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section id="about" class="active">
-                <h2>About Me</h2>
-                <p>I've been part of Girls Who Code, learning coding and cybersecurity basics. I enjoy problem-solving, coding, and exploring cybersecurity topics.</p>
-            </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I've been part of Girls Who Code, gaining experience in coding and cybersecurity. I enjoy problem-solving, coding, and exploring cybersecurity topics.</p>
+        </section>
 
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Python (basic)</li>
-                    <li>Intro to Cybersecurity</li>
-                    <li>Cryptography</li>
-                    <li>Problem Solving & Critical Thinking</li>
-                </ul>
-            </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python (basic)</li>
+                <li>Intro to Cybersecurity</li>
+                <li>Cryptography</li>
+                <li>Problem Solving & Critical Thinking</li>
+            </ul>
+        </section>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">Breach Bot</a></li>
-                    <li><a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">Programming Caesar's Cipher</a></li>
-                    <li><a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">Cracking Caesar's Cipher</a></li>
-                </ul>
-            </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">Breach Bot</a></li>
+                <li><a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">Programming Caesar's Cipher</a></li>
+                <li><a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">Cracking Caesar's Cipher</a></li>
+            </ul>
+        </section>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            </section>
-        </main>
-    </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </section>
+    </main>
 </body>
 </html>
