@@ -1,121 +1,148 @@
-/* Reset & font */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    background-color: #fff0f5; /* pastel lavender background */
-    color: #333;
-    overflow: hidden; /* disables normal scrolling */
+/* ===== General Styles ===== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* Header */
+body {
+  margin: 0;
+  font-family: 'Caprasimo', cursive;
+  background: linear-gradient(120deg, #F5F5F5, #E0F7FA);
+  color: #333;
+}
+
+/* ===== Header ===== */
 header {
-    text-align: center;
-    padding: 60px 20px;
-    background: #ffd1dc; /* pastel pink */
-    border-bottom: 4px solid #ffb6c1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #E0F7FA;
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: #ff69b4;
+  text-align: center;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #D8A7B1;
 }
 
-header p {
-    font-size: 1.2rem;
-    margin: 10px 0 30px 0;
+nav {
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* Navigation Buttons */
-header nav button {
-    background: #fff;
-    color: #ff69b4;
-    border: 2px solid #ffb6c1;
-    border-radius: 12px;
-    padding: 12px 24px;
-    margin: 0 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+nav button {
+  background: linear-gradient(135deg, #F5F5F5, #FFF8F0);
+  border: 2px solid #D8A7B1;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #D8A7B1;
 }
 
-header nav button:hover {
-    background: #ffb6c1;
-    color: #fff;
-    transform: translateY(-3px);
+nav button:hover {
+  background: #D8A7B1;
+  color: #FFF8F0;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(216,167,177,0.5);
 }
 
-/* Sections */
+/* ===== Sections ===== */
 section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-    border-radius: 12px;
-    background: #ffe4e1; /* pastel cream for content */
-    display: none;
-    animation: fadeIn 0.5s ease forwards;
+  padding: 120px 20px 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 20px;
+  background: #FFF8F0;
+  margin-top: 60px;
+  transition: all 0.5s ease;
 }
 
-/* Section Headings */
 section h2 {
-    color: #ff69b4;
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #D8A7B1;
+  margin-bottom: 20px;
 }
 
-/* Lists */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul li {
-    background: #fff0f5;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: #F5F5F5;
+  position: relative;
+  font-size: 1.1rem;
 }
 
-ul li:hover {
-    background: #ffb6c1;
-    color: #fff;
+ul li::before {
+  content: "➤";
+  margin-right: 10px;
+  color: #D8A7B1;
 }
 
-/* Project Cards */
 .project-card {
-    background: #fff0f5;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background: #FFF8F0;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.project-card::before {
+  content: "★";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #D8A7B1;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(216,167,177,0.5);
 }
 
 .project-card a {
-    color: #ff69b4;
-    text-decoration: none;
-    font-weight: bold;
+  color: #D8A7B1;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffd1dc;
-    color: #ff69b4;
+  text-align: center;
+  padding: 30px 10px;
+  background: #E0F7FA;
+  color: #D8A7B1;
+  font-size: 0.9rem;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-    to { opacity: 1; }
+.symbol {
+  position: fixed;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  animation: float 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
 }
