@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="hero">
+<div id="hero" class="section active">
     <h1>Lea Herrera</h1>
     <p>Aspiring SOC Analyst</p>
     <nav>
@@ -19,42 +19,44 @@
     </nav>
 </div>
 
-<main>
-    <section id="about" class="hidden">
-        <h2>About Me</h2>
-        <p>I've been part of Girls Who Code, gaining experience in coding and cybersecurity. I enjoy problem-solving, coding, and exploring cybersecurity topics.</p>
-    </section>
+<div id="about" class="section">
+    <h2>About Me</h2>
+    <p>I've been part of Girls Who Code, gaining experience in coding and cybersecurity. I enjoy problem-solving, coding, and exploring cybersecurity topics.</p>
+    <button class="btn back" onclick="showSection('hero')">Back</button>
+</div>
 
-    <section id="skills" class="hidden">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python (basic)</li>
-            <li>Intro to Cybersecurity</li>
-            <li>Cryptography</li>
-            <li>Problem Solving & Critical Thinking</li>
-        </ul>
-    </section>
+<div id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+        <li>Python (basic)</li>
+        <li>Intro to Cybersecurity</li>
+        <li>Cryptography</li>
+        <li>Problem Solving & Critical Thinking</li>
+    </ul>
+    <button class="btn back" onclick="showSection('hero')">Back</button>
+</div>
 
-    <section id="projects" class="hidden">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">Breach Bot</a></li>
-            <li><a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">Programming Caesar's Cipher</a></li>
-            <li><a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">Cracking Caesar's Cipher</a></li>
-        </ul>
-    </section>
+<div id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">Breach Bot</a></li>
+        <li><a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">Programming Caesar's Cipher</a></li>
+        <li><a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">Cracking Caesar's Cipher</a></li>
+    </ul>
+    <button class="btn back" onclick="showSection('hero')">Back</button>
+</div>
 
-    <section id="contact" class="hidden">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </section>
-</main>
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <button class="btn back" onclick="showSection('hero')">Back</button>
+</div>
 
 <script>
 function showSection(id) {
-    const sections = document.querySelectorAll('main section');
-    sections.forEach(sec => sec.classList.add('hidden'));
-    document.getElementById(id).classList.remove('hidden');
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
 }
 </script>
 
