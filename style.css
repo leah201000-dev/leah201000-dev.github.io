@@ -15,8 +15,8 @@ body {
   height: 100%;
   background-image: repeating-linear-gradient(
     45deg,
-    rgba(200, 220, 240, 0.15),
-    rgba(200, 220, 240, 0.15) 20px,
+    rgba(0, 123, 255, 0.05),
+    rgba(0, 123, 255, 0.05) 20px,
     transparent 20px,
     transparent 40px
   );
@@ -51,7 +51,7 @@ nav {
 }
 
 nav button {
-  background-color: #4a90e2;
+  background-color: #2a3f55;
   color: white;
   border: none;
   border-radius: 8px;
@@ -63,7 +63,7 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #357ABD;
+  background-color: #4a90e2;
   transform: translateY(-3px);
 }
 
