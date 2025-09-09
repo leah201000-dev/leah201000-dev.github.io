@@ -1,8 +1,8 @@
-function showSection(sectionId) {
+function showSection(id) {
   document.getElementById('landing').style.display = 'none';
   const sections = document.querySelectorAll('.section');
   sections.forEach(sec => sec.style.display = 'none');
-  document.getElementById(sectionId).style.display = 'flex';
+  document.getElementById(id).style.display = 'block';
 }
 
 function showLanding() {
