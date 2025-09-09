@@ -4,49 +4,165 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lea Herrera | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body { margin:0; padding:0; font-family:'Quicksand', sans-serif; background:#fff0f5; color:#333; }
-header { text-align:center; padding:60px 20px; background:#ffd1dc; border-bottom:4px solid #ffb6c1; }
-header h1 { font-size:3rem; color:#ff69b4; margin:0; }
-header p { font-size:1.2rem; margin:10px 0 30px 0; }
-header nav button {
-  background:#fff; color:#ff69b4; border:2px solid #ffb6c1; border-radius:12px;
-  padding:12px 24px; margin:0 5px; font-weight:600; cursor:pointer; transition:all 0.3s ease;
+/* Reset & font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo 2', cursive;
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1, #fff0f5);
+  color: #333;
+  overflow: hidden;
 }
-header nav button:hover { background:#ffb6c1; color:#fff; transform:translateY(-3px); }
-section { padding:60px 20px; max-width:900px; margin:auto; border-radius:12px; background:#ffe4e1; display:none; }
-section h2 { color:#ff69b4; font-size:2rem; margin-bottom:20px; }
-ul { list-style:none; padding:0; }
-ul li { background:#fff0f5; margin:8px 0; padding:10px; border-radius:8px; transition:all 0.3s ease; }
-ul li:hover { background:#ffb6c1; color:#fff; }
-.project-card { background:#fff0f5; padding:20px; margin:15px 0; border-radius:12px; transition:transform 0.3s, box-shadow 0.3s; }
-.project-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(255,182,193,0.5); }
-.project-card a { color:#ff69b4; text-decoration:none; font-weight:bold; }
-.project-card a:hover { text-decoration:underline; }
-footer { text-align:center; padding:20px; background:#ffd1dc; color:#ff69b4; }
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffd1dc;
+  border-bottom: 4px solid #ffb6c1;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ff69b4;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 10px 0 30px 0;
+}
+
+/* Navigation Buttons */
+header nav button {
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+  color: #ff69b4;
+  border: 2px solid #ffb6c1;
+  border-radius: 12px;
+  padding: 12px 24px;
+  margin: 0 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header nav button:hover {
+  background: #ffb6c1;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255,182,193,0.5);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 20px;
+  background: #fff0f5;
+  display: none;
+  box-shadow: 0 8px 20px rgba(255,182,193,0.2);
+}
+
+/* Section headings with symbols */
+section h2 {
+  color: #ff69b4;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Lists with symbols */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #ffe4e1;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+ul li::before {
+  content: '✦';
+  margin-right: 10px;
+  color: #ff69b4;
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff0f5;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.project-card::before {
+  content: '❀';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #ff69b4;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255,182,193,0.5);
+}
+
+.project-card a {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffd1dc;
+  color: #ff69b4;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 </style>
 </head>
 <body>
 
 <header>
-<h1>Lea Herrera</h1>
+<h1>❁ Lea Herrera ❁</h1>
 <p>Aspiring SOC Analyst | Cybersecurity & Coding Enthusiast</p>
 <nav>
-<button data-target="about">About Me</button>
-<button data-target="skills">Skills</button>
-<button data-target="projects">Projects</button>
-<button data-target="contact">Contact</button>
+<button data-target="about">✦ About Me ✦</button>
+<button data-target="skills">✧ Skills ✧</button>
+<button data-target="projects">❀ Projects ❀</button>
+<button data-target="contact">✿ Contact ✿</button>
 </nav>
 </header>
 
 <section id="about">
-<h2>About Me</h2>
+<h2>❀ About Me ❀</h2>
 <p>I am passionate about cybersecurity and programming. I participated in the Girls Who Code program and gained hands-on experience in coding and cyber basics. I enjoy solving problems, exploring new technologies, and learning about how to protect systems and networks.</p>
 </section>
 
 <section id="skills">
-<h2>Skills</h2>
+<h2>✧ Skills ✧</h2>
 <ul>
 <li>Python programming</li>
 <li>Intro to Cybersecurity</li>
@@ -57,7 +173,7 @@ footer { text-align:center; padding:20px; background:#ffd1dc; color:#ff69b4; }
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
+<h2>❀ Projects ❀</h2>
 <div class="project-card">
 <h3>Breach Bot</h3>
 <p>A Python-based bot designed for cybersecurity applications, focusing on breach detection and response automation.</p>
@@ -76,7 +192,7 @@ footer { text-align:center; padding:20px; background:#ffd1dc; color:#ff69b4; }
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
+<h2>✿ Contact ✿</h2>
 <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
 <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></p>
 </section>
