@@ -1,4 +1,4 @@
-// Smooth scroll for nav buttons
+// Smooth scroll for navigation buttons
 const buttons = document.querySelectorAll('header nav button');
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
