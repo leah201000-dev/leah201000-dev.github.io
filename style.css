@@ -66,3 +66,19 @@ button:hover {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.about-box {
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-box p {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
