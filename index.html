@@ -6,71 +6,79 @@
 <title>Lea Herrera | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
 <style>
-/* Body & font */
+/* ===== General Styles ===== */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Caprasimo', cursive;
-  background: linear-gradient(135deg, #E6E6FA, #FFF8F0);
+  background: linear-gradient(120deg, #F5F5F5, #E0F7FA);
   color: #333;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
-  text-align: center;
-  padding: 60px 20px;
-  background: #F7CAC9;
-  border-bottom: 4px solid #D8A7B1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #E0F7FA;
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
-  font-size: 3rem;
+  text-align: center;
   margin: 0;
+  font-size: 2.5rem;
   color: #D8A7B1;
 }
 
-header p {
-  font-size: 1.2rem;
-  margin: 10px 0 30px 0;
+nav {
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* Navigation Buttons */
-header nav button {
-  background: linear-gradient(135deg, #FFF8F0, #FFE4E1);
-  color: #FFB6C1;
+nav button {
+  background: linear-gradient(135deg, #F5F5F5, #FFF8F0);
   border: 2px solid #D8A7B1;
   border-radius: 12px;
-  padding: 12px 24px;
-  margin: 0 5px;
-  font-weight: 600;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #D8A7B1;
 }
 
-header nav button:hover {
+nav button:hover {
   background: #D8A7B1;
-  color: #fff;
+  color: #FFF8F0;
   transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(255,182,193,0.5);
+  box-shadow: 0 4px 15px rgba(216,167,177,0.5);
 }
 
-/* Sections */
+/* ===== Sections ===== */
 section {
-  padding: 60px 20px;
+  padding: 120px 20px 80px 20px; /* top padding accounts for fixed header */
   max-width: 900px;
-  margin: 40px auto;
+  margin: auto;
   border-radius: 20px;
   background: #FFF8F0;
-  display: none;
-  box-shadow: 0 8px 20px rgba(255,182,193,0.2);
+  margin-top: 60px;
+  transition: all 0.5s ease;
 }
 
 /* Section headings with symbols */
 section h2 {
-  color: #D8A7B1;
   font-size: 2rem;
-  margin-bottom: 20px;
   text-align: center;
+  color: #D8A7B1;
+  margin-bottom: 20px;
 }
 
 /* Lists with symbols */
@@ -80,18 +88,18 @@ ul {
 }
 
 ul li {
-  background: #FFE4E1;
   margin: 10px 0;
   padding: 12px;
   border-radius: 12px;
-  transition: all 0.3s ease;
+  background: #F5F5F5;
   position: relative;
+  font-size: 1.1rem;
 }
 
 ul li::before {
-  content: '➤';
+  content: "➤";
   margin-right: 10px;
-  color: #FFB6C1;
+  color: #D8A7B1;
 }
 
 /* Project Cards */
@@ -105,7 +113,7 @@ ul li::before {
 }
 
 .project-card::before {
-  content: '★';
+  content: "★";
   position: absolute;
   top: 10px;
   right: 15px;
@@ -115,11 +123,11 @@ ul li::before {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255,182,193,0.5);
+  box-shadow: 0 10px 25px rgba(216,167,177,0.5);
 }
 
 .project-card a {
-  color: #FFB6C1;
+  color: #D8A7B1;
   text-decoration: none;
   font-weight: bold;
 }
@@ -131,9 +139,25 @@ ul li::before {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #F7CAC9;
+  padding: 30px 10px;
+  background: #E0F7FA;
   color: #D8A7B1;
+  font-size: 0.9rem;
+}
+
+/* ===== Floating Symbols Animation ===== */
+.symbol {
+  position: fixed;
+  font-size: 1.5rem;
+  opacity: 0.2;
+  animation: float 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
 }
 </style>
 </head>
@@ -141,7 +165,6 @@ footer {
 
 <header>
 <h1>♡ Lea Herrera ♡</h1>
-<p>Aspiring SOC Analyst ⚚ Cybersecurity & Coding Enthusiast</p>
 <nav>
 <button data-target="about">⸝⸝.ᐟ⋆ About Me ˚₊‧꒰ა ☆ ໒꒱ ‧₊˚</button>
 <button data-target="skills">۶ৎ Skills ゛ ˎˊ˗</button>
@@ -152,17 +175,17 @@ footer {
 
 <section id="about">
 <h2>⸝⸝.ᐟ⋆ About Me ˚₊‧꒰ა ☆ ໒꒱ ‧₊˚</h2>
-<p>I am passionate about cybersecurity and programming. I participated in the Girls Who Code program and gained hands-on experience in coding and cyber basics. I enjoy problem-solving, exploring new technologies, and learning how to protect systems and networks.</p>
+<p>I am passionate about cybersecurity and coding. I participated in Girls Who Code and love exploring programming challenges, problem-solving, and learning how to secure systems and networks.</p>
 </section>
 
 <section id="skills">
 <h2>۶ৎ Skills ゛ ˎˊ˗</h2>
 <ul>
-<li>Python programming</li>
+<li>Python Programming</li>
 <li>Intro to Cybersecurity</li>
-<li>Cryptography basics</li>
-<li>Networking fundamentals</li>
-<li>Problem-solving & troubleshooting</li>
+<li>Cryptography Basics</li>
+<li>Networking Fundamentals</li>
+<li>Problem Solving & Troubleshooting</li>
 </ul>
 </section>
 
@@ -170,17 +193,17 @@ footer {
 <h2>★ Projects ➤</h2>
 <div class="project-card">
 <h3>Breach Bot</h3>
-<p>A Python-based bot designed for cybersecurity applications, focusing on breach detection and response automation.</p>
+<p>Python-based bot focusing on breach detection and automation.</p>
 <a href="https://replit.com/@leah201000/Breach-Bot-Lea-H" target="_blank">View Project</a>
 </div>
 <div class="project-card">
 <h3>Programming Caesar's Cipher</h3>
-<p>Implemented the Caesar Cipher encryption technique in Python, demonstrating basic cryptography principles.</p>
+<p>Implemented Caesar Cipher encryption in Python.</p>
 <a href="https://replit.com/@leah201000/Programming-Caesars-Cipher-Lea-H" target="_blank">View Project</a>
 </div>
 <div class="project-card">
 <h3>Cracking Caesar's Cipher</h3>
-<p>Developed a tool to decrypt Caesar Cipher texts, showcasing skills in cryptanalysis and algorithm design.</p>
+<p>Tool to decrypt Caesar Cipher texts, showcasing cryptanalysis skills.</p>
 <a href="https://replit.com/@leah201000/Cracking-Caesars-Cipher-Lea-H" target="_blank">View Project</a>
 </div>
 </section>
@@ -191,23 +214,24 @@ footer {
 <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></p>
 </section>
 
-<footer>© 2025 Lea Herrera</footer>
+<footer>
+© 2025 Lea Herrera
+</footer>
+
+<!-- Floating symbols -->
+<div class="symbol" style="top:10%; left:15%;">⚚</div>
+<div class="symbol" style="top:20%; left:80%;">✿</div>
+<div class="symbol" style="top:70%; left:40%;">ˎˊ˗</div>
+<div class="symbol" style="top:50%; left:60%;">★</div>
 
 <script>
+// Smooth scroll for nav buttons
 const buttons = document.querySelectorAll('header nav button');
-const sections = document.querySelectorAll('section');
-
-function showSection(id) {
-  sections.forEach(s => s.style.display='none');
-  document.getElementById(id).style.display='block';
-}
-
-// Show default section
-showSection('about');
-
-// Button click event
 buttons.forEach(btn => {
-  btn.addEventListener('click', () => showSection(btn.getAttribute('data-target')));
+  btn.addEventListener('click', () => {
+    const section = document.getElementById(btn.dataset.target);
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
 });
 </script>
 
