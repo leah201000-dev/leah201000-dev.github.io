@@ -6,12 +6,12 @@
 <title>Lea Herrera | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 <style>
-/* Reset & font */
+/* Body & font */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Baloo 2', cursive;
-  background: linear-gradient(135deg, #ffd1dc, #ffe4e1, #fff0f5);
+  background: linear-gradient(135deg, #E6E6FA, #FFF8F0);
   color: #333;
 }
 
@@ -19,14 +19,14 @@ body {
 header {
   text-align: center;
   padding: 60px 20px;
-  background: #ffd1dc;
-  border-bottom: 4px solid #ffb6c1;
+  background: #F7CAC9;
+  border-bottom: 4px solid #D8A7B1;
 }
 
 header h1 {
   font-size: 3rem;
   margin: 0;
-  color: #ff69b4;
+  color: #D8A7B1;
 }
 
 header p {
@@ -36,9 +36,9 @@ header p {
 
 /* Navigation Buttons */
 header nav button {
-  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
-  color: #ff69b4;
-  border: 2px solid #ffb6c1;
+  background: linear-gradient(135deg, #FFF8F0, #FFE4E1);
+  color: #FFB6C1;
+  border: 2px solid #D8A7B1;
   border-radius: 12px;
   padding: 12px 24px;
   margin: 0 5px;
@@ -48,7 +48,7 @@ header nav button {
 }
 
 header nav button:hover {
-  background: #ffb6c1;
+  background: #D8A7B1;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(255,182,193,0.5);
@@ -60,14 +60,14 @@ section {
   max-width: 900px;
   margin: 40px auto;
   border-radius: 20px;
-  background: #fff0f5;
+  background: #FFF8F0;
   display: none;
   box-shadow: 0 8px 20px rgba(255,182,193,0.2);
 }
 
 /* Section headings with symbols */
 section h2 {
-  color: #ff69b4;
+  color: #D8A7B1;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -80,7 +80,7 @@ ul {
 }
 
 ul li {
-  background: #ffe4e1;
+  background: #FFE4E1;
   margin: 10px 0;
   padding: 12px;
   border-radius: 12px;
@@ -89,14 +89,14 @@ ul li {
 }
 
 ul li::before {
-  content: '✦';
+  content: '❀';
   margin-right: 10px;
-  color: #ff69b4;
+  color: #FFB6C1;
 }
 
 /* Project Cards */
 .project-card {
-  background: #fff0f5;
+  background: #FFF8F0;
   padding: 20px;
   margin: 20px 0;
   border-radius: 20px;
@@ -105,12 +105,12 @@ ul li::before {
 }
 
 .project-card::before {
-  content: '❀';
+  content: '⪩';
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 1.5rem;
-  color: #ff69b4;
+  color: #D8A7B1;
 }
 
 .project-card:hover {
@@ -119,7 +119,7 @@ ul li::before {
 }
 
 .project-card a {
-  color: #ff69b4;
+  color: #FFB6C1;
   text-decoration: none;
   font-weight: bold;
 }
@@ -132,36 +132,31 @@ ul li::before {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #ffd1dc;
-  color: #ff69b4;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  to { opacity: 1; }
+  background-color: #F7CAC9;
+  color: #D8A7B1;
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>❁ Lea Herrera ❁</h1>
+<h1>⟡ Lea Herrera ⟡</h1>
 <p>Aspiring SOC Analyst | Cybersecurity & Coding Enthusiast</p>
 <nav>
-<button data-target="about">✦ About Me ✦</button>
-<button data-target="skills">✧ Skills ✧</button>
+<button data-target="about">⨳ About Me ⨳</button>
+<button data-target="skills">⊹ Skills ⊹</button>
 <button data-target="projects">❀ Projects ❀</button>
-<button data-target="contact">✿ Contact ✿</button>
+<button data-target="contact">♡ Contact ♡</button>
 </nav>
 </header>
 
 <section id="about">
-<h2>❀ About Me ❀</h2>
-<p>I am passionate about cybersecurity and programming. I participated in the Girls Who Code program and gained hands-on experience in coding and cyber basics. I enjoy solving problems, exploring new technologies, and learning about how to protect systems and networks.</p>
+<h2>⿸ About Me ⿸</h2>
+<p>I am passionate about cybersecurity and programming. I participated in the Girls Who Code program and gained hands-on experience in coding and cyber basics. I enjoy problem-solving, exploring new technologies, and learning how to protect systems and networks.</p>
 </section>
 
 <section id="skills">
-<h2>✧ Skills ✧</h2>
+<h2>⊂⊃ Skills ⊂⊃</h2>
 <ul>
 <li>Python programming</li>
 <li>Intro to Cybersecurity</li>
@@ -191,7 +186,7 @@ footer {
 </section>
 
 <section id="contact">
-<h2>✿ Contact ✿</h2>
+<h2>✶ Contact ✶</h2>
 <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
 <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></p>
 </section>
@@ -210,7 +205,7 @@ function showSection(id) {
 // Show default section
 showSection('about');
 
-// Add click event to buttons
+// Button click event
 buttons.forEach(btn => {
   btn.addEventListener('click', () => showSection(btn.getAttribute('data-target')));
 });
