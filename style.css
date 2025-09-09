@@ -1,25 +1,25 @@
-/* Basic Reset & Fonts */
+/* Reset & font */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #0d0d0d;
-    color: #ffffff;
-    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff0f5; /* pastel lavender background */
+    color: #333;
+    overflow: hidden; /* disables normal scrolling */
 }
 
 /* Header */
 header {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #ff69b4, #00ff99);
-    color: #fff;
+    background: #ffd1dc; /* pastel pink */
+    border-bottom: 4px solid #ffb6c1;
 }
 
 header h1 {
     font-size: 3rem;
     margin: 0;
-    text-shadow: 2px 2px #000;
+    color: #ff69b4;
 }
 
 header p {
@@ -29,11 +29,11 @@ header p {
 
 /* Navigation Buttons */
 header nav button {
-    background: #0d0d0d;
+    background: #fff;
     color: #ff69b4;
-    border: 2px solid #ff69b4;
-    border-radius: 8px;
-    padding: 10px 20px;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+    padding: 12px 24px;
     margin: 0 5px;
     font-weight: 600;
     cursor: pointer;
@@ -41,8 +41,8 @@ header nav button {
 }
 
 header nav button:hover {
-    background: #ff69b4;
-    color: #0d0d0d;
+    background: #ffb6c1;
+    color: #fff;
     transform: translateY(-3px);
 }
 
@@ -51,14 +51,10 @@ section {
     padding: 60px 20px;
     max-width: 900px;
     margin: auto;
-    animation: fadeIn 1s ease forwards;
-    opacity: 0;
-}
-
-section:nth-of-type(odd) {
-    background-color: #121212;
     border-radius: 12px;
-    margin: 30px 20px;
+    background: #ffe4e1; /* pastel cream for content */
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 /* Section Headings */
@@ -75,7 +71,7 @@ ul {
 }
 
 ul li {
-    background: #1f1f1f;
+    background: #fff0f5;
     margin: 8px 0;
     padding: 10px;
     border-radius: 8px;
@@ -83,13 +79,13 @@ ul li {
 }
 
 ul li:hover {
-    background: #ff69b4;
-    color: #0d0d0d;
+    background: #ffb6c1;
+    color: #fff;
 }
 
 /* Project Cards */
 .project-card {
-    background: #1f1f1f;
+    background: #fff0f5;
     padding: 20px;
     margin: 15px 0;
     border-radius: 12px;
@@ -98,11 +94,11 @@ ul li:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
 }
 
 .project-card a {
-    color: #00ff99;
+    color: #ff69b4;
     text-decoration: none;
     font-weight: bold;
 }
@@ -115,13 +111,11 @@ ul li:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #121212;
+    background-color: #ffd1dc;
     color: #ff69b4;
 }
 
-/* Animations */
+/* Fade-in animation */
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
 }
